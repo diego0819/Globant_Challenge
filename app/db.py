@@ -7,7 +7,7 @@ def get_db_connection():
         conn = psycopg2.connect(
             dbname="postgres",  # Reemplaza con el nombre de tu base de datos
             user="postgres",    # Reemplaza con tu usuario de base de datos
-            password="Halo3071041",  # Reemplaza con tu contraseña de base de datos
+            password="",  # Reemplaza con tu contraseña de base de datos
             host="localhost",       # Reemplaza con tu host de base de datos si no es local
             port="5432"            # Reemplaza con tu puerto de base de datos si no es el predeterminado
         )

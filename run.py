@@ -3,7 +3,7 @@ from flask import Flask, jsonify, g
 
 app = Flask(__name__)
 
-DATABASE_URL = 'postgresql://postgres:Halo3071041@localhost:5432/postgres' # Reemplaza con tus credenciales
+DATABASE_URL = 'postgresql://postgres:**@localhost:5432/postgres' # Reemplaza con tus credenciales
 
 def get_db():
     if 'db' not in g:

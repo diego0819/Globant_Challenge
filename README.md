@@ -22,12 +22,12 @@ The goal of this project was to develop a REST API that can:
 
 * Receive historical data from CSV files (departments, jobs, hired\_employees).
 * Upload these files to a SQL database (PostgreSQL).
-* Insert data in batch transactions (up to 1000 rows per request). [cite: 7]
+* Insert data in batch transactions (up to 1000 rows per request).
 
 Additionally, the project requires creating API endpoints to provide specific data insights through SQL queries:
 
-* Number of employees hired for each job and department in 2021, divided by quarter, ordered alphabetically. [cite: 13, 14]
-* List of departments that hired more employees than the average in 2021, ordered by the number of employees hired (descending). [cite: 16]
+* Number of employees hired for each job and department in 2021, divided by quarter, ordered alphabetically.
+* List of departments that hired more employees than the average in 2021, ordered by the number of employees hired (descending).
 
 ## Features
 
@@ -69,7 +69,6 @@ Additionally, the project requires creating API endpoints to provide specific da
     ```bash
     python -m venv venv
     venv\Scripts\activate  # On Windows
-    source venv/bin/activate  # On Linux/macOS
     ```
 
 3.  **Install the dependencies:**
@@ -104,7 +103,7 @@ Additionally, the project requires creating API endpoints to provide specific da
 
 * **`GET /hires-by-quarter`**
     * Description:  Returns the number of employees hired for each job and department in 2021, divided by quarter, ordered alphabetically by department and job.
-    * Output Example:
+    *  Example:
 
         ```json
         {
@@ -118,7 +117,7 @@ Additionally, the project requires creating API endpoints to provide specific da
         }
         ```
       * http://127.0.0.1:5000/departments_above_average_hires
-      * http://127.0.0.1:5000/hires_by_quarter
+      
 
 * **`GET /departments-above-average-hires`**
     * Description:  Returns a list of departments that hired more employees than the average in 2021, ordered by the number of employees hired (descending).
@@ -130,6 +129,7 @@ Additionally, the project requires creating API endpoints to provide specific da
             {"id": 9, "department": "Supply Chain", "hired": 12}
         ]
         ```
+      * http://127.0.0.1:5000/hires_by_quarter
 
 ## Data Structures
 
@@ -138,15 +138,15 @@ Additionally, the project requires creating API endpoints to provide specific da
     * `name` (STRING): Name and surname of the employee.
     * `datetime` (STRING): Hire datetime in ISO format (YYYY-MM-DD).
     * `department_id` (INTEGER): Id of the department which the employee was hired for.
-    * `job_id` (INTEGER): Id of the job which the employee was hired for.  [cite: 20]
+    * `job_id` (INTEGER): Id of the job which the employee was hired for. 
 
 * **departments.csv:**
     * `id` (INTEGER): Id of the department.
-    * `department` (STRING): Name of the department. [cite: 22]
+    * `department` (STRING): Name of the department. 
 
 * **jobs.csv:**
     * `id` (INTEGER): Id of the job.
-    * `job` (STRING): Name of the job. [cite: 24]
+    * `job` (STRING): Name of the job. 
 
 ## Assumptions
 
